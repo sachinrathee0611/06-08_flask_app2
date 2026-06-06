@@ -1,4 +1,4 @@
-name: Flask Applocation2 Pipeline
+name: Flask Application2 Pipeline
 
 on:
     push:
@@ -22,7 +22,7 @@ jobs:
 
             - name: Installing the related dependencies
               run: |
-                python -m pip --upgrade pip
+                python -m pip install --upgrade pip
                 pip install -r requirements-dev.txt
 
             - name: Running the test using Pytest
