@@ -1,0 +1,29 @@
+name: Flask Applocation2 Pipeline
+
+on:
+    push:
+        branches:
+            - main
+
+    pull_request:
+
+jobs:
+    testing:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Checking out the code from the repository"
+              uses: actions/checkout@v6
+
+            - name: Installing and setting up of Python
+              uses: actions/python@v6
+              with: 
+                python-version: '3.13' 
+
+            - name: Installing the related dependencies
+              run: |
+                python -m pip --upgrade pip
+                pip install -r requirements-dev.txt
+
+            - name: Running the test using Pytest
+              run: python -m pytest -v
