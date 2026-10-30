@@ -8,7 +8,7 @@ A tiny Flask API for practicing Continuous Integration with GitHub Actions.
 - `/health` returns health status
 - `/add`, `/subtract`, `/multiply`, `/divide` perform math operations
 
-## Run locally
+## Run locally 
 
 ```bash
 python -m venv .venv
